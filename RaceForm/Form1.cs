@@ -25,6 +25,12 @@ namespace RaceForm
         private void LogMessage(string msg)
         {
             this.Invoke(new Action(() => textBox1.Text += msg + "\r\n"));
+            this.Invoke(new Action(() => textBox2.Text += msg + "\r\n"));
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
