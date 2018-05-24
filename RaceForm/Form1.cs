@@ -19,7 +19,7 @@ namespace RaceForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LogMessage("Hallo");
+            LogMessage("DOEI!");
         }
 
         private void LogMessage(string msg)
