@@ -31,9 +31,11 @@ namespace RaceForm
             int betMark = Int32.Parse(betAmountMark);
             int betHarald = Int32.Parse(betAmountHarald);
             int betKetty = Int32.Parse(betAmountKetty);
-            //5.Log de string
-            LogMessage(bets);
 
+            int totalBets = betMark + betHarald + betKetty;
+            //5.Log de string
+
+            LogMessage(totalBets.ToString());
         }
 
 
