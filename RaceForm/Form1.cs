@@ -26,11 +26,13 @@ namespace RaceForm
             string betAmountKetty = textBox4.Text;   //3.Haal de ingevulde waarde van Ketty op en sla die op in een veldje
 
             string bets = "Mark has bet: " + betAmountMark +"\r\n" + "Harald has bet: " + betAmountHarald + "\r\n" + 
-                          "Ketty has bet: " + betAmountKetty;  //4.Maak een string van al die waardes
+                          "Ketty has bet: " + betAmountKetty;                   //4.Maak een string van al die waardes
 
-
-            LogMessage(bets);
+            int betMark = Int32.Parse(betAmountMark);
+            int betHarald = Int32.Parse(betAmountHarald);
+            int betKetty = Int32.Parse(betAmountKetty);
             //5.Log de string
+            LogMessage(bets);
 
         }
 
