@@ -21,29 +21,20 @@ namespace RaceForm
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string betAmountMark = textBox2.Text;    //1.Haal de ingevulde waarde van Mark op en sla die op in een veldje
+            string betAmountHarald = textBox3.Text;  //2.Haal de ingevulde waarde van Harald op en sla die op in een veldje
+            string betAmountKetty = textBox4.Text;   //3.Haal de ingevulde waarde van Ketty op en sla die op in een veldje
 
-          //  LogMessage();
+            string bets = betAmountMark + betAmountHarald + betAmountKetty;  //4.Maak een string van al die waardes
 
-            string betAmountMark = textBox2.Text;
-            string betAmountHarald = textBox3.Text;
-            string betAmountKetty = textBox4.Text;
-
-            string bets = betAmountMark + betAmountHarald + betAmountKetty;
-            //1.Haal de ingevulde waarde van Mark op en sla die op in een veldje
-
-            //2.Haal de ingevulde waarde van ...
-
-            //3.Haal de......
-
-            //4.Maak een string van al die waardes
-
+            LogMessage(bets);
             //5.Log de string
 
         }
 
         private void LogMessage(string msg)
         {
-            this.Invoke(new Action(() => textBox1.Text += msg + "\r\n"));
+        //    this.Invoke(new Action(() => textBox1.Text += msg + "\r\n"));
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
