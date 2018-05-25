@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace RaceForm
 {
-  
+
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
-          
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,21 +32,11 @@ namespace RaceForm
 
         }
 
+
         private void LogMessage(string msg)
         {
-        //    this.Invoke(new Action(() => textBox1.Text += msg + "\r\n"));
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
+            //Dit is onze log code, deze methode hoef je nooit meer aan te passen
+            this.Invoke(new Action(() => textBox1.Text += msg + "\r\n"));
         }
     }
 }
