@@ -41,7 +41,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(54, 52);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(573, 481);
@@ -50,7 +50,7 @@
             // StartRaceButton
             // 
             this.StartRaceButton.Location = new System.Drawing.Point(867, 443);
-            this.StartRaceButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StartRaceButton.Margin = new System.Windows.Forms.Padding(2);
             this.StartRaceButton.Name = "StartRaceButton";
             this.StartRaceButton.Size = new System.Drawing.Size(142, 90);
             this.StartRaceButton.TabIndex = 1;
@@ -99,6 +99,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 26);
             this.textBox3.TabIndex = 6;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -106,6 +107,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 7;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // Form1
             // 
@@ -120,7 +122,7 @@
             this.Controls.Add(this.Mark);
             this.Controls.Add(this.StartRaceButton);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
