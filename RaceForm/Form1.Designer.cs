@@ -44,6 +44,8 @@
             this.Paardje2Textbox = new System.Windows.Forms.TextBox();
             this.Paardje3Textbox = new System.Windows.Forms.TextBox();
             this.Paardje4Textbox = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -52,17 +54,17 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(573, 481);
+            this.textBox1.Size = new System.Drawing.Size(585, 127);
             this.textBox1.TabIndex = 0;
             // 
             // StartRaceButton
             // 
-            this.StartRaceButton.Location = new System.Drawing.Point(867, 443);
+            this.StartRaceButton.Location = new System.Drawing.Point(759, 64);
             this.StartRaceButton.Margin = new System.Windows.Forms.Padding(2);
             this.StartRaceButton.Name = "StartRaceButton";
             this.StartRaceButton.Size = new System.Drawing.Size(142, 90);
             this.StartRaceButton.TabIndex = 1;
-            this.StartRaceButton.Text = "Start Race!";
+            this.StartRaceButton.Text = "Bets:";
             this.StartRaceButton.UseVisualStyleBackColor = true;
             this.StartRaceButton.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -95,21 +97,21 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(776, 49);
+            this.textBox2.Location = new System.Drawing.Point(926, 49);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 26);
             this.textBox2.TabIndex = 5;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(776, 96);
+            this.textBox3.Location = new System.Drawing.Point(926, 96);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 26);
             this.textBox3.TabIndex = 6;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(776, 149);
+            this.textBox4.Location = new System.Drawing.Point(926, 146);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 7;
@@ -193,11 +195,32 @@
             this.Paardje4Textbox.TabIndex = 15;
             this.Paardje4Textbox.Text = "0";
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(54, 239);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(585, 366);
+            this.textBox5.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(884, 504);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 90);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Start Race!";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 741);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.Paardje4Textbox);
             this.Controls.Add(this.Paardje3Textbox);
             this.Controls.Add(this.Paardje2Textbox);
@@ -240,6 +263,8 @@
         private System.Windows.Forms.TextBox Paardje2Textbox;
         private System.Windows.Forms.TextBox Paardje3Textbox;
         private System.Windows.Forms.TextBox Paardje4Textbox;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button1;
     }
 }
 

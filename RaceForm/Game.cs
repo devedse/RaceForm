@@ -8,7 +8,9 @@ namespace RaceForm
 {
     class Game
     {
-        public string Gamblers { get; set; }
+        public int Amount;
+        public int Horse;
+        public Gambler Bettor;
        
     }
 }

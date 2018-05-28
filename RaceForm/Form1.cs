@@ -13,12 +13,28 @@ namespace RaceForm
 
     public partial class Form1 : Form
     {
+        Horses[] horses = new Horses[4];
+        Gambler[] gamblers = new Gambler[3];
         public Form1()
         {
             InitializeComponent();
 
+            
         }
 
+        public void SetupRaceTrack()
+        {
+            horses[1] = new Horses()
+            {
+                
+
+            };
+
+            gamblers[0] = new Gambler("Ketty", new Game(), 10, new Label());
+            gamblers[1] = new Gambler("Mark", new Game(), 50, new Label());
+            gamblers[2] = new Gambler("Harald", new Game(), 100, new Label());
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             string betAmountMark = textBox2.Text;    //1.Haal de ingevulde waarde van Mark op en sla die op in een veldje
@@ -30,11 +46,13 @@ namespace RaceForm
 
             string[] randomNumbers = new string[] { Paardje1Textbox.Text, Paardje2Textbox.Text, Paardje3Textbox.Text, Paardje4Textbox.Text };
 
-            Label[] horses = { Paardje1, Paardje2, Paardje3, Paardje4 };
+            //Label[] horses = { Paardje1, Paardje2, Paardje3, Paardje4 }; <-- hoeft waarschijnlijk niet, want we doen niks met de labels
+
+            //Hier ergens moet nog code komen waarin random nummers worden gegenereerd voor de textboxen van horses
+            //zodra je op 'Start Race' drukt.
 
             try
             {
-             
                 int betMark = Int32.Parse(betAmountMark);                                           //Parse string textboxes to int with parse method
                 int betHarald = Int32.Parse(betAmountHarald);
                 int betKetty = Int32.Parse(betAmountKetty);
@@ -43,7 +61,7 @@ namespace RaceForm
 
                 int[] myHorsesNumbers = Array.ConvertAll(randomNumbers, s => int.Parse(s));         //convert string array to int array
           
-                LogMessage(bets);
+                LogMessage(bets);                                                                   //5.Log de string
                 LogMessage(totalBets.ToString());
                 LogMessage(myHorsesNumbers.ToString());
             }
@@ -51,11 +69,7 @@ namespace RaceForm
             {
                 throw new Exception("Place a valid bet");
             }
-   
-            //5.Log de string
-
         }
-
 
         private void LogMessage(string msg)
         {

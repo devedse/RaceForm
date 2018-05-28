@@ -9,11 +9,24 @@ namespace RaceForm
 {
     class Gambler
     {
-        public string Name;
-        public int Cash { get; set; }
-     
-        public Label MyLabel { get; set; }
+        public int Cash;
 
-        
+        public string Name { get; set; }
+
+        public Label MyLabel { get; }
+
+        public Gambler(string name, Game myBet, int cash, Label myLabel)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentNullException("Give me a valid name");
+            }
+
+            MyLabel = myLabel;
+            myLabel.Text = name;
+
+            Cash = cash;
+            
+        }
     }
 }
