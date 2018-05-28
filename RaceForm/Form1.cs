@@ -28,14 +28,32 @@ namespace RaceForm
             string bets = "Mark has bet: " + betAmountMark +"\r\n" + "Harald has bet: " + betAmountHarald + "\r\n" + 
                           "Ketty has bet: " + betAmountKetty;                   //4.Maak een string van al die waardes
 
-            int betMark = Int32.Parse(betAmountMark);
-            int betHarald = Int32.Parse(betAmountHarald);
-            int betKetty = Int32.Parse(betAmountKetty);
+            string[] randomNumbers = new string[] { Paardje1Textbox.Text, Paardje2Textbox.Text, Paardje3Textbox.Text, Paardje4Textbox.Text };
 
-            int totalBets = betMark + betHarald + betKetty;
+            Label[] horses = { Paardje1, Paardje2, Paardje3, Paardje4 };
+
+            try
+            {
+             
+                int betMark = Int32.Parse(betAmountMark);                                           //Parse string textboxes to int with parse method
+                int betHarald = Int32.Parse(betAmountHarald);
+                int betKetty = Int32.Parse(betAmountKetty);
+
+                int totalBets = betMark + betHarald + betKetty;
+
+                int[] myHorsesNumbers = Array.ConvertAll(randomNumbers, s => int.Parse(s));         //convert string array to int array
+          
+                LogMessage(bets);
+                LogMessage(totalBets.ToString());
+                LogMessage(myHorsesNumbers.ToString());
+            }
+            catch (Exception)
+            {
+                throw new Exception("Place a valid bet");
+            }
+   
             //5.Log de string
 
-            LogMessage(totalBets.ToString());
         }
 
 
@@ -43,6 +61,16 @@ namespace RaceForm
         {
             //Dit is onze log code, deze methode hoef je nooit meer aan te passen
             this.Invoke(new Action(() => textBox1.Text += msg + "\r\n"));
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Paardje1Textbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

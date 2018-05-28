@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace RaceForm
 {
-    class Bet
+    class Game
     {
+        public string Gamblers { get; set; }
+       
     }
 }
