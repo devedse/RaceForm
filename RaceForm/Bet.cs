@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace RaceForm
 {
-    class Gambler
+    class Bet
     {
-        public int Name { get; set; }
-        public string Cash { get; set; }
+        public Gambler Gambler { get; set; }
+        public Horse Horse { get; set; }
+        public Horse HorseAmount { get; set; }
     }
 }
