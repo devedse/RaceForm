@@ -9,7 +9,15 @@ namespace RaceForm
 {
     class Gambler
     {
-        public int Name { get; set; }
-        public string Cash { get; set; }
+        public string naam { get; set; }
+        public int cash { get; set; }
+
+        public Gambler(string naam, int cash)
+        {
+            this.naam = naam;
+            this.cash = cash;
+        }
+
+    
     }
 }

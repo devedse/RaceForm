@@ -9,35 +9,68 @@ namespace RaceForm
     class Game
     {
         public int Amount { get; set; }
-        public Gambler Gamblers { get; set; }
-        public int Horses { get; set; }
+        public List<Gambler> Gamblers { get; set; }
+        public List<Horse> Horses { get; set; }
         public int HorsesAmount { get; set; }
         public int Bets { get; set; }
         public int Racetrack { get; set; }
         public int MinBet { get; set; }
         public int MaxBet { get; set; }
-        
-        Game(int HorsesAmount)
+        public Game(int amountOfHorses)
         {
-            string[] horses = new string[3];
-            horses[0] = "horse1";
-            horses[1] = "horse2";
-            horses[2] = "horse3";
-            horses[3] = "horse4";
+            List<Horse> horses = new List<Horse>();
+            horses.Add(new Horse("Horse 1"));
+            horses.Add(new Horse("Horse 2"));
+            horses.Add(new Horse("Horse 3"));
+            horses.Add(new Horse("Horse 4"));
         }
-        public bool PlaceBet(int HorseAmount, int Dog)
+        public void PlaceBet(string nameOfBetter, int amount, int horse)
         {
+            var gambler = ZoekGambler(nameOfBetter);
+
+            if(gambler == null)
+            {
+                throw new Exception("No better!");
+            }
+
+            if(gambler.cash >= amount)
+            {
+                if (horse != 0)
+                {
+                    var newBet = new Bet();
+                }//kijk of paard bestaat en of er genoeg cash is etc.
+            }
+            
+        }
+        public void addGambler(string naam, int cash)
+        {
+          if(cash > Amount)
+            {
+                List<Gambler> gambler = new List<Gambler>();
+                gambler.Add(new Gambler("Ketty", 10));
+            }
+            else
+            {
+                throw new Exception("There is no gambler");
+            }
 
         }
-        public string AddGambler()
+        private Gambler ZoekGambler(string naam)
         {
-
+            foreach (var gambler in Gamblers)
+            {
+                if (gambler.naam == naam)
+                {
+                    return gambler;
+                }
+            }
+            return null;
         }
 
-        public bool Run()
-        {
+        //public bool Run()
+        //{
 
-        }
+        //}
         public void Reset()
         {
 
