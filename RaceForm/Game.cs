@@ -18,36 +18,40 @@ namespace RaceForm
         public int MaxBet { get; set; }
         public Game(int amountOfHorses)
         {
-            List<Horse> horses = new List<Horse>();
-            horses.Add(new Horse("Horse 1"));
-            horses.Add(new Horse("Horse 2"));
-            horses.Add(new Horse("Horse 3"));
-            horses.Add(new Horse("Horse 4"));
+            Run();
+
+            var horses = new List<int>();
+            horses.Add();
+            horses.Add(2);
+            horses.Add(3);
+            horses.Add(4);
         }
         public void PlaceBet(string nameOfBetter, int amount, int horse)
         {
             var gambler = ZoekGambler(nameOfBetter);
+            var minBet = MinBet;
 
             if(gambler == null)
             {
                 throw new Exception("No better!");
             }
 
-            if(gambler.cash >= amount)
+            if(gambler.Cash >= amount)      //als gambler zijn cash meer is dan amount 0.
             {
                 if (horse != 0)
                 {
-                    var newBet = new Bet();
+                    var myBet = new Bet();
                 }//kijk of paard bestaat en of er genoeg cash is etc.
             }
             
         }
         public void addGambler(string naam, int cash)
         {
-          if(cash > Amount)
+          if(naam!=null && cash > Amount)         //Als een naam bestaat en de cash minder dan de (minimale bet) is.
             {
-                List<Gambler> gambler = new List<Gambler>();
-                gambler.Add(new Gambler("Ketty", 10));
+                List<Gambler> gambler = new List<Gambler>();   //Als dat zo is, maak dan een lijst aan met gamblers.
+                gambler.Add(new Gambler("Ketty", 10));         //En geef een naam op met hoeveel cash hij/zij heeft
+
             }
             else
             {
@@ -55,11 +59,11 @@ namespace RaceForm
             }
 
         }
-        private Gambler ZoekGambler(string naam)
+        private Gambler ZoekGambler(string name)
         {
             foreach (var gambler in Gamblers)
             {
-                if (gambler.naam == naam)
+                if (gambler.Name == name)
                 {
                     return gambler;
                 }
@@ -67,13 +71,17 @@ namespace RaceForm
             return null;
         }
 
-        //public bool Run()
-        //{
-
-        //}
+        public bool Run()
+        {
+            
+            return true;
+        }
         public void Reset()
         {
-
+         
+            
+          //Als de finish is
+          //Of als de cashout gedaan is
         }
        
     }

@@ -9,13 +9,13 @@ namespace RaceForm
 {
     class Gambler
     {
-        public string naam { get; set; }
-        public int cash { get; set; }
+        public string Name { get; set; }
+        public int Cash { get; set; }
 
-        public Gambler(string naam, int cash)
+        public Gambler(string name, int cash)
         {
-            this.naam = naam;
-            this.cash = cash;
+            this.Name = name;
+            this.Cash = cash;
         }
 
     

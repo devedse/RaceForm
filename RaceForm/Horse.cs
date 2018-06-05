@@ -11,23 +11,31 @@ namespace RaceForm
     {
         private string horse;
 
-        public Horse(string horse)
+        public Horse(string nameOfHorse)
         {
-            this.horse = horse;
+            this.horse = nameOfHorse;
         }
 
         public string Game { get; set; }
-        public Random Speed { get; set; }
+        public Random RandomSpeed { get; set; }
         public int StartPosition { get; set; }
-        
-        //public bool Run()
-        //{ 
+        public int Location { get; set; }
 
-        //}
+        public bool Run()
+        {
+            Location += RandomSpeed.Next(1, 100);
+            horse += Location;
+
+            if(Location == 100)
+            {
+                return true;
+            }
+            return false;
+        }
 
         public void TakeStartPosition()
         {
-            StartPosition = 0;
+            Location =  0;
         }
     }
 }

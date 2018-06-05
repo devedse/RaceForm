@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.horseLabel = new System.Windows.Forms.Label();
+            this.amountLabel = new System.Windows.Forms.Label();
             this.addBetButton = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -43,33 +43,33 @@
             this.startRaceButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // nameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(109, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name:";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(109, 32);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(55, 20);
+            this.nameLabel.TabIndex = 0;
+            this.nameLabel.Text = "Name:";
             // 
-            // label2
+            // horseLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(326, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Horse:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.horseLabel.AutoSize = true;
+            this.horseLabel.Location = new System.Drawing.Point(326, 32);
+            this.horseLabel.Name = "horseLabel";
+            this.horseLabel.Size = new System.Drawing.Size(56, 20);
+            this.horseLabel.TabIndex = 1;
+            this.horseLabel.Text = "Horse:";
+            this.horseLabel.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // amountLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(558, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Amount:";
+            this.amountLabel.AutoSize = true;
+            this.amountLabel.Location = new System.Drawing.Point(558, 32);
+            this.amountLabel.Name = "amountLabel";
+            this.amountLabel.Size = new System.Drawing.Size(69, 20);
+            this.amountLabel.TabIndex = 2;
+            this.amountLabel.Text = "Amount:";
             // 
             // addBetButton
             // 
@@ -163,7 +163,7 @@
             this.startRaceButton.Name = "startRaceButton";
             this.startRaceButton.Size = new System.Drawing.Size(144, 127);
             this.startRaceButton.TabIndex = 13;
-            this.startRaceButton.Text = "Add bet";
+            this.startRaceButton.Text = "Start Race!";
             this.startRaceButton.UseVisualStyleBackColor = true;
             // 
             // Form1
@@ -181,9 +181,9 @@
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.addBetButton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.amountLabel);
+            this.Controls.Add(this.horseLabel);
+            this.Controls.Add(this.nameLabel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -194,9 +194,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label horseLabel;
+        private System.Windows.Forms.Label amountLabel;
         private System.Windows.Forms.Button addBetButton;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
