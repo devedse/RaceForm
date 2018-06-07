@@ -23,6 +23,8 @@ namespace RaceForm
             Game.addGambler("Gokbeest", 144);
             Game.addGambler("Dave", 20);
             Game.addGambler("Ket", 321321132);
+
+            //Wat nu  handig is d
         }
 
         private void button1_Click(object sender, EventArgs e)
