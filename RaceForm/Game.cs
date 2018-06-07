@@ -14,8 +14,14 @@ namespace RaceForm
         public int MinBet { get; set; }
         public int MaxBet { get; set; }
 
-        public Game(int amountOfHorses)
+        private ILogger logger;
+
+
+
+        public Game(ILogger logger, int amountOfHorses)
         {
+            this.logger = logger;
+
             Horses = new List<Horse>();
             Gamblers = new List<Gambler>();
 
@@ -26,13 +32,13 @@ namespace RaceForm
         }
 
         public void PlaceBet(string nameOfBetter, int amount, int horse)
-        {
+        {            //Die krijg je mee, dus als we terug gaan naar Form1 waar rwe die aarnoepen
             var gambler = ZoekGambler(nameOfBetter);
             var minBet = MinBet;
 
             if (gambler == null)
             {
-              
+
                 throw new Exception("No better!");
             }
 
@@ -41,7 +47,10 @@ namespace RaceForm
                 if (horse != 0)
                 {
                     var myBet = new Bet();
-                }//kijk of paard bestaat en of er genoeg cash is etc.
+
+                    logger.LogMessage($"{nameOfBetter} has bet {amount} on horse {horse}");
+                }
+                //kijk of paard bestaat en of er genoeg cash is etc.
             }
 
         }
@@ -49,8 +58,7 @@ namespace RaceForm
         {
             if (naam != null && cash > Amount)         //Als een naam bestaat en de cash minder dan de (minimale bet) is.
             {
-                Gamblers.Add(new Gambler("Ketty", 10));         //En geef een naam op met hoeveel cash hij/zij heeft
-
+                Gamblers.Add(new Gambler(naam, cash));         //En geef een naam op met hoeveel cash hij/zij heef
             }
             else
             {
