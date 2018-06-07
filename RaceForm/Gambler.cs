@@ -18,6 +18,6 @@ namespace RaceForm
             this.Cash = cash;
         }
 
-    
+
     }
 }

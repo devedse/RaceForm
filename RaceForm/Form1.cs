@@ -14,12 +14,11 @@ namespace RaceForm
     public partial class Form1 : Form
     {
         TextBox addedbets;
-        
+
         public Form1()
         {
             InitializeComponent();
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -33,7 +32,7 @@ namespace RaceForm
         }
 
         private void addBetButton_Click(object sender, EventArgs e)
-        {            
+        {
             //LogMessage("${0} has bet on Horse {1} with an amount of {3}", nameOfBetter, numberOfHorse, amountOfBet);
         }
     }
