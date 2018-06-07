@@ -60,7 +60,6 @@
             this.horseLabel.Size = new System.Drawing.Size(56, 20);
             this.horseLabel.TabIndex = 1;
             this.horseLabel.Text = "Horse:";
-            this.horseLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // amountLabel
             // 

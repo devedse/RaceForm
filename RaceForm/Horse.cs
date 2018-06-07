@@ -9,17 +9,17 @@ namespace RaceForm
 {
     class Horse
     {
-        private string horse;
-
-        public Horse(string nameOfHorse)
-        {
-            this.horse = nameOfHorse;
-        }
-
-        public string Game { get; set; }
+        public Game Game { get ; set; }
         public Random RandomSpeed { get; set; }
         public int StartPosition { get; set; }
         public int Location { get; set; }
+        public string horse { get; set; }
+
+        public Horse(string nameOfHorse, Game game)
+        {
+            this.horse = nameOfHorse;
+            this.Game = game;
+        }
 
         public bool Run()
         {

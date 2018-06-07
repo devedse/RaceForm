@@ -32,24 +32,8 @@ namespace RaceForm
             this.Invoke(new Action(() => betInfoTextBox.Text += msg + "\r\n"));
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Paardje1Textbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void addBetButton_Click(object sender, EventArgs e)
-        {
-            
+        {            
             //LogMessage("${0} has bet on Horse {1} with an amount of {3}", nameOfBetter, numberOfHorse, amountOfBet);
         }
     }
