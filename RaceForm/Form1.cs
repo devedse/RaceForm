@@ -20,6 +20,9 @@ namespace RaceForm
         {
             InitializeComponent();
             Game = new Game(4);
+            Game.addGambler("Gokbeest", 144);
+            Game.addGambler("Dave", 20);
+            Game.addGambler("Ket", 321321132);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,10 +38,8 @@ namespace RaceForm
 
         private void addBetButton_Click(object sender, EventArgs e)
         {
-            Game.PlaceBet("Kerel", 12, 3);
-            //Ok nu F5 om weer ddoor te gaan en dan een bet placen dan komen we hier
-
-            //LogMessage("${0} has bet on Horse {1} with an amount of {3}", nameOfBetter, numberOfHorse, amountOfBet);
+            int amountToBet = int.Parse(amountTextBox.Text);
+            Game.PlaceBet(nameTextBox.Text, amountToBet, 3);
         }
     }
 }

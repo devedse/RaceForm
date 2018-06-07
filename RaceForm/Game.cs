@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RaceForm
 {
@@ -20,10 +17,11 @@ namespace RaceForm
         public Game(int amountOfHorses)
         {
             Horses = new List<Horse>();
+            Gamblers = new List<Gambler>();
 
             for (int i = 0; i < amountOfHorses; i++)
             {
-                Horses.Add(new Horse("Huppelpaard", this));
+                Horses.Add(new Horse("Huppelpaard" + i, this));
             }
         }
 
@@ -34,6 +32,7 @@ namespace RaceForm
 
             if (gambler == null)
             {
+              
                 throw new Exception("No better!");
             }
 
@@ -50,8 +49,7 @@ namespace RaceForm
         {
             if (naam != null && cash > Amount)         //Als een naam bestaat en de cash minder dan de (minimale bet) is.
             {
-                List<Gambler> gambler = new List<Gambler>();   //Als dat zo is, maak dan een lijst aan met gamblers.
-                gambler.Add(new Gambler("Ketty", 10));         //En geef een naam op met hoeveel cash hij/zij heeft
+                Gamblers.Add(new Gambler("Ketty", 10));         //En geef een naam op met hoeveel cash hij/zij heeft
 
             }
             else
@@ -62,14 +60,6 @@ namespace RaceForm
         }
         private Gambler ZoekGambler(string name)
         {
-            //Laat dit nog maar even staan zoals het stond
-            //Maar in elk geval goed om te noteren dat we een Nullreferenceexception kregen
-            //Waaorm kregen we die?:
-            //gambler was null zag ik
-            //Gambler of Gamblers?/gamblers
-            //klopt, maar dat fixen we later welok
-            //Ok 
-            //Even naar boven in deze klasse
             foreach (var gambler in Gamblers)
             {
                 if (gambler.Name == name)
