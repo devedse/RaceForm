@@ -27,7 +27,6 @@ namespace RaceForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-
         }
 
         public void LogMessage(string msg)
@@ -38,8 +37,37 @@ namespace RaceForm
 
         private void addBetButton_Click(object sender, EventArgs e)
         {
+            int horseBet;
+
+            if (horse1Button.Checked == true)
+            {
+                horseBet = 1;
+            }
+            else if (horse2Button.Checked == true)
+            {
+                horseBet = 2;
+            }
+            else if (horse3Button.Checked == true)
+            {
+                horseBet = 3;
+            }
+            else
+            {
+                horseBet = 4;
+            }
+
+            //Zie deze: http://csharp.net-informations.com/gui/cs-radiobutton.htm
+
+
+            //Ga eens debuggen weer dan kan ik het laten zien :)
+            //ow had je het gezien eigenlijk
+            //Ja het werkte toch ^^?jaa
+            //Maar snap je dit tukje hierboven? ja dat is niet zo la //elk paard is gelinkt aan een intje
+            //Ja en op deze manier kan je dus kijken welk paard je hebt geselecteerd Als ik na ga denken dan is dat altijd ingewikkelder dan de code zelf
+
+            //Ik zou zo weer ff inchecken ^^
             int amountToBet = int.Parse(amountTextBox.Text);
-            Game.PlaceBet(nameTextBox.Text, amountToBet, 3);
+            Game.PlaceBet(nameTextBox.Text, amountToBet, horseBet);
         }
     }
 }

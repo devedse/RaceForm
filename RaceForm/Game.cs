@@ -16,8 +16,6 @@ namespace RaceForm
 
         private ILogger logger;
 
-
-
         public Game(ILogger logger, int amountOfHorses)
         {
             this.logger = logger;
@@ -32,13 +30,12 @@ namespace RaceForm
         }
 
         public void PlaceBet(string nameOfBetter, int amount, int horse)
-        {            //Die krijg je mee, dus als we terug gaan naar Form1 waar rwe die aarnoepen
+        {
             var gambler = ZoekGambler(nameOfBetter);
             var minBet = MinBet;
 
             if (gambler == null)
             {
-
                 throw new Exception("No better!");
             }
 
