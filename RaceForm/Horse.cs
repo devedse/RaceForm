@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RaceForm
 {
-    class Horse
+    public class Horse
     {
         public Game Game { get; set; }
         public Random RandomSpeed { get; set; }

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace RaceForm
 {
-    class Gambler
+    public class Gambler
     {
         public string Name { get; set; }
         public int Cash { get; set; }

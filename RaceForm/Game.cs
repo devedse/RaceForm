@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RaceForm
 {
-    class Game
+    public class Game
     {
         public int Amount { get; set; }
         public List<Gambler> Gamblers { get; set; }
@@ -19,15 +19,12 @@ namespace RaceForm
 
         public Game(int amountOfHorses)
         {
+            Horses = new List<Horse>();
+
             for (int i = 0; i < amountOfHorses; i++)
             {
-                //Als hij in de loop komt, maak dan een lijst aan
-                Horses = new List<Horse>();
-                //voeg daarna een nieuw paard toe aan het lijstje
                 Horses.Add(new Horse("Huppelpaard", this));
             }
-
-
         }
 
         public void PlaceBet(string nameOfBetter, int amount, int horse)
@@ -65,6 +62,14 @@ namespace RaceForm
         }
         private Gambler ZoekGambler(string name)
         {
+            //Laat dit nog maar even staan zoals het stond
+            //Maar in elk geval goed om te noteren dat we een Nullreferenceexception kregen
+            //Waaorm kregen we die?:
+            //gambler was null zag ik
+            //Gambler of Gamblers?/gamblers
+            //klopt, maar dat fixen we later welok
+            //Ok 
+            //Even naar boven in deze klasse
             foreach (var gambler in Gamblers)
             {
                 if (gambler.Name == name)

@@ -13,11 +13,13 @@ namespace RaceForm
 
     public partial class Form1 : Form
     {
-        TextBox addedbets;
+        public Game Game { get; set; }
+        public int Dingetje { get; set; }
 
         public Form1()
         {
             InitializeComponent();
+            Game = new Game(4);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,6 +35,9 @@ namespace RaceForm
 
         private void addBetButton_Click(object sender, EventArgs e)
         {
+            Game.PlaceBet("Kerel", 12, 3);
+            //Ok nu F5 om weer ddoor te gaan en dan een bet placen dan komen we hier
+
             //LogMessage("${0} has bet on Horse {1} with an amount of {3}", nameOfBetter, numberOfHorse, amountOfBet);
         }
     }
