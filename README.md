@@ -70,7 +70,7 @@ public class Game
 		Gamblers = new List<Gambler>();
 	}
 
-	public void addGambler(string naam, int cash)
+	public void AddGambler(string naam, int cash)
 	{
 		Gamblers.Add(new Gambler(naam, cash));
 	}
